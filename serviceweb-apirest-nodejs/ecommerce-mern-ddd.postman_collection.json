@@ -138,6 +138,26 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "[GET] Refresh Token User",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/user/refresh-token-user",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"user",
+												"refresh-token-user"
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
