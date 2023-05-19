@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "eb3c7217-877d-4a65-b699-438373adec0b",
+		"name": "ecommerce-mern-ddd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20955189"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "0 - USER",
+					"item": [
+						{
+							"name": "[POST] Register a User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstname\":\"Brayan\",\n    \"lastname\":\"Esteves\",\n    \"email\":\"brayan.esteves93@gmail.com\",\n    \"mobile\":\"+584149904852\",\n    \"password\":\"1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/api/user/register",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[POST] Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"brayan.esteves93@gmail.com\",\n    \"password\":\"1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/api/user/login",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[Get] All Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:4000/api/user/all-users",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"user",
+										"all-users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
