@@ -219,6 +219,86 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "[PUT] Blocked User",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NDUyNzQ4NywiZXhwIjoxNjg0NjEzODg3fQ.o7NTdqt_bLDX-HK7kQeNJsBflUslXrhpyShcFsqKE-Y",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:4000/api/user/block-user/6467e32bab25458336f082f6",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"user",
+												"block-user",
+												"6467e32bab25458336f082f6"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[PUT] Unblocked User",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NDUyNzQ4NywiZXhwIjoxNjg0NjEzODg3fQ.o7NTdqt_bLDX-HK7kQeNJsBflUslXrhpyShcFsqKE-Y",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:4000/api/user/unblock-user/6467e32bab25458336f082f6",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"user",
+												"unblock-user",
+												"6467e32bab25458336f082f6"
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						}
