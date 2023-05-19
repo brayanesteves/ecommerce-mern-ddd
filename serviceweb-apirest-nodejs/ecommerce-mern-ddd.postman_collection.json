@@ -81,6 +81,16 @@
 								{
 									"name": "[GET] All Users",
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NDUyNzQ4NywiZXhwIjoxNjg0NjEzODg3fQ.o7NTdqt_bLDX-HK7kQeNJsBflUslXrhpyShcFsqKE-Y",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
 										"header": [],
 										"url": {
@@ -137,6 +147,16 @@
 								{
 									"name": "[DELETE] Delete user",
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NDUyNzQ4NywiZXhwIjoxNjg0NjEzODg3fQ.o7NTdqt_bLDX-HK7kQeNJsBflUslXrhpyShcFsqKE-Y",
+													"type": "string"
+												}
+											]
+										},
 										"method": "DELETE",
 										"header": [],
 										"url": {
@@ -163,6 +183,16 @@
 								{
 									"name": "[PUT] Updated User",
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NDUyNzQ4NywiZXhwIjoxNjg0NjEzODg3fQ.o7NTdqt_bLDX-HK7kQeNJsBflUslXrhpyShcFsqKE-Y",
+													"type": "string"
+												}
+											]
+										},
 										"method": "PUT",
 										"header": [],
 										"body": {
