@@ -79,7 +79,7 @@
 							"name": "GET's",
 							"item": [
 								{
-									"name": "[Get] All Users",
+									"name": "[GET] All Users",
 									"request": {
 										"method": "GET",
 										"header": [],
@@ -101,10 +101,20 @@
 								{
 									"name": "[GET] Get User",
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NDUyNzQ4NywiZXhwIjoxNjg0NjEzODg3fQ.o7NTdqt_bLDX-HK7kQeNJsBflUslXrhpyShcFsqKE-Y",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "localhost:4000/api/user/get-user/6467c0a37925287f8d7e7fd4",
+											"raw": "localhost:4000/api/user/get-user/6467d976fb66c566bc423422",
 											"host": [
 												"localhost"
 											],
@@ -113,7 +123,7 @@
 												"api",
 												"user",
 												"get-user",
-												"6467c0a37925287f8d7e7fd4"
+												"6467d976fb66c566bc423422"
 											]
 										}
 									},
