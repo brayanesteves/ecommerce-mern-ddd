@@ -73,7 +73,33 @@ const handleRefreshToken = asyncHandler(async (req, res) => {
         const accessToken = generateToken(user?._id);
         res.json({ accessToken });
     });
+});
 
+// Logout functionality
+const logout = asyncHandler(async (req, res) => {
+    const cookie = req.cookies;    
+    if(!cookie?.refreshToken) {
+        throw new Error('No Refresh Token in Cookies.');
+    }
+    const refreshToken = cookie.refreshToken;    
+    const user         = await User.findOne({ refreshToken });    
+    if(!user) {
+        res.clearCookie('refreshToken', {
+            httpOnly:true,
+              secure:true,
+        });
+        // Forbidden
+        return res.sendStatus(204);
+    }
+    await User.findOneAndUpdate({ refreshToken: refreshToken }, {
+        refreshToken:"",
+    });
+    res.clearCookie('refreshToken', {
+        httpOnly:true,
+          secure:true,
+    });
+    // Forbidden
+    return res.sendStatus(204);
 });
 
 // Get all users
@@ -175,4 +201,4 @@ const unblockUser = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = { createUserSingle, createUser, loginUserCtrl, getUsers, getUser, updatedUser, deleteUser, blockUser, unblockUser, handleRefreshToken };
+module.exports = { createUserSingle, createUser, loginUserCtrl, getUsers, getUser, updatedUser, deleteUser, blockUser, unblockUser, handleRefreshToken, logout };
