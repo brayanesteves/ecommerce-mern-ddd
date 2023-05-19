@@ -130,7 +130,7 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "localhost:4000/api/user/get-user/6467c0a37925287f8d7e7fd4",
+											"raw": "localhost:4000/api/user/delete-user/6467c0a37925287f8d7e7fd4",
 											"host": [
 												"localhost"
 											],
@@ -138,8 +138,43 @@
 											"path": [
 												"api",
 												"user",
-												"get-user",
+												"delete-user",
 												"6467c0a37925287f8d7e7fd4"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "PUT's",
+							"item": [
+								{
+									"name": "[PUT] Updated User",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstname\":\"Brayan\",\n    \"lastname\":\"Esteves\",\n    \"email\":\"brayan.esteves94@gmail.com\",\n    \"mobile\":\"+584149904852\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:4000/api/user/update-user/6467bc5adc0c319484a158af",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"user",
+												"update-user",
+												"6467bc5adc0c319484a158af"
 											]
 										}
 									},

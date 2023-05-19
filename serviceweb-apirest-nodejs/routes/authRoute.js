@@ -1,5 +1,5 @@
 const express  = require("express");
-const { createUser, createUserSingle, loginUserCtrl, getUsers, getUser, deleteUser } = require("../controllers/userCtrl");
+const { createUser, createUserSingle, loginUserCtrl, getUsers, getUser, updatedUser, deleteUser } = require("../controllers/userCtrl");
 const router   = express.Router();
 
 router.post  ('/register-single', createUserSingle);
@@ -8,5 +8,6 @@ router.post  (          '/login', loginUserCtrl);
 router.get   (      '/all-users', getUsers);
 router.get   (   '/get-user/:id', getUser);
 router.delete('/delete-user/:id', deleteUser);
+router.put   ('/update-user/:id', updatedUser);
 
 module.exports = router;

@@ -52,6 +52,28 @@ const getUsers = asyncHandler(async (req, res) => {
     }
 });
 
+// Update a user
+const updatedUser = asyncHandler(async (req, res) => {
+    const { id } = req.params;
+    const { firstname, lastname, email, mobile } = req.body;
+    try {
+        const user = await User.findByIdAndUpdate(id, {
+            firstname:firstname, 
+             lastname:lastname, 
+                email:email, 
+               mobile:mobile,
+        },
+        {
+            new:true,
+        });
+        res.json({
+            user,
+        });
+    } catch(error) {
+        throw new Error(error);
+    }
+});
+
 // Get a single user
 const getUser = asyncHandler(async (req, res) => {
     const { id } = req.params;
@@ -78,4 +100,4 @@ const deleteUser = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = { createUserSingle, createUser, loginUserCtrl, getUsers, getUser, deleteUser };
+module.exports = { createUserSingle, createUser, loginUserCtrl, getUsers, getUser, updatedUser, deleteUser };
