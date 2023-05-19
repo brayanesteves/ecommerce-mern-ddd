@@ -120,6 +120,32 @@
 									"response": []
 								}
 							]
+						},
+						{
+							"name": "DELETE's",
+							"item": [
+								{
+									"name": "[DELETE] Delete user",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/user/get-user/6467c0a37925287f8d7e7fd4",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"user",
+												"get-user",
+												"6467c0a37925287f8d7e7fd4"
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						}
 					]
 				}
