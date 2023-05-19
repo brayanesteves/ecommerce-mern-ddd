@@ -3,6 +3,7 @@ const User                    = require('../models/userModel');
 const asyncHandler            = require("express-async-handler");
 const { validateMongDbId }    = require('../utils/validateMongodbId');
 const { generateRefeshToken } = require('../configs/refreshToken');
+const jwt                     = require("jsonwebtoken");
 
 const createUserSingle = async (req, res) => {
     const email    = req.body.email;
@@ -52,6 +53,53 @@ const loginUserCtrl = asyncHandler(async(req, res) => {
     } else {
         throw new Error("Invalid Credentials.");
     }
+});
+
+// Handle refresh token
+const handleRefreshToken = asyncHandler(async (req, res) => {
+    const cookie = req.cookies;
+    if(!cookie?.refreshToken) {
+        throw new Error('No Refresh Token in Cookies.');
+    }
+    const refreshToken = cookie.refreshToken;
+    const user         = await User.findOne({ refreshToken });
+    if(!user) {
+        throw new Error('No Refresh Token present in "DB" or not matched.');
+    }
+    jwt.verify(refreshToken, "brayanesteveshalconbit", (err, decoded) => {
+        if(err || user.id !== decoded.id) {
+            throw new Error('There is something wrong with refresh token.');
+        }
+        const accessToken = generateToken(user?._id);
+        res.json({ accessToken });
+    });
+});
+
+// Logout functionality
+const logout = asyncHandler(async (req, res) => {
+    const cookie = req.cookies;    
+    if(!cookie?.refreshToken) {
+        throw new Error('No Refresh Token in Cookies.');
+    }
+    const refreshToken = cookie.refreshToken;    
+    const user         = await User.findOne({ refreshToken });    
+    if(!user) {
+        res.clearCookie('refreshToken', {
+            httpOnly:true,
+              secure:true,
+        });
+        // Forbidden
+        return res.sendStatus(204);
+    }
+    await User.findOneAndUpdate({ refreshToken: refreshToken }, {
+        refreshToken:"",
+    });
+    res.clearCookie('refreshToken', {
+        httpOnly:true,
+          secure:true,
+    });
+    // Forbidden
+    return res.sendStatus(204);
 });
 
 // Get all users
@@ -153,4 +201,4 @@ const unblockUser = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = { createUserSingle, createUser, loginUserCtrl, getUsers, getUser, updatedUser, deleteUser, blockUser, unblockUser };
+module.exports = { createUserSingle, createUser, loginUserCtrl, getUsers, getUser, updatedUser, deleteUser, blockUser, unblockUser, handleRefreshToken, logout };
