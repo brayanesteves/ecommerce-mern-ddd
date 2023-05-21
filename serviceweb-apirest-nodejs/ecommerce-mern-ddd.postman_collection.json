@@ -464,7 +464,29 @@
 						},
 						{
 							"name": "DELETE's",
-							"item": []
+							"item": [
+								{
+									"name": "[GET] Find Product Copy",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/product/delete-product/64696d5b199eaea74ca479ed",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"delete-product",
+												"64696d5b199eaea74ca479ed"
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						}
 					]
 				}
