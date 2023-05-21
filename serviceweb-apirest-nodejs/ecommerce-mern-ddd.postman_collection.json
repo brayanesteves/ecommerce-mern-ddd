@@ -429,7 +429,38 @@
 						},
 						{
 							"name": "PUT's",
-							"item": []
+							"item": [
+								{
+									"name": "[PUT] Update Product",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Samsung Laptop 22\",\n    \"category\":\"laptop\",\n    \"brand\":\"Samsung\",\n    \"description\":\"Hey this is apple product\",\n    \"price\":500,\n    \"quantity\":100,\n    \"color\":\"yellow\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:4000/api/product/update-product/64696d5b199eaea74ca479ed",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"update-product",
+												"64696d5b199eaea74ca479ed"
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						},
 						{
 							"name": "DELETE's",
