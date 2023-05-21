@@ -349,7 +349,49 @@
 					"item": [
 						{
 							"name": "GET's",
-							"item": []
+							"item": [
+								{
+									"name": "[GET] Find Product",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/product/find-product/64696d5b199eaea74ca479ed",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"find-product",
+												"64696d5b199eaea74ca479ed"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[GET] All Products",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/product/all-product",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"all-product"
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						},
 						{
 							"name": "POST's",
