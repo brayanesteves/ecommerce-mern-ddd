@@ -343,6 +343,182 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "1 - PRODUCT",
+					"item": [
+						{
+							"name": "GET's",
+							"item": [
+								{
+									"name": "[GET] Find Product",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/product/find-product/64696d5b199eaea74ca479ed",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"find-product",
+												"64696d5b199eaea74ca479ed"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[GET] All Products",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/product/all-product",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"all-product"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST's",
+							"item": [
+								{
+									"name": "[POST] Add Product",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NDUyNzQ4NywiZXhwIjoxNjg0NjEzODg3fQ.o7NTdqt_bLDX-HK7kQeNJsBflUslXrhpyShcFsqKE-Y",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Samsung Laptop\",\n    \"category\":\"laptop\",\n    \"brand\":\"Samsung\",\n    \"description\":\"Hey this is apple product\",\n    \"price\":500,\n    \"quantity\":100,\n    \"color\":\"yellow\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:4000/api/product/add-product",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"add-product"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "PUT's",
+							"item": [
+								{
+									"name": "[PUT] Update Product",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NDUyNzQ4NywiZXhwIjoxNjg0NjEzODg3fQ.o7NTdqt_bLDX-HK7kQeNJsBflUslXrhpyShcFsqKE-Y",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Samsung Laptop 22\",\n    \"category\":\"laptop\",\n    \"brand\":\"Samsung\",\n    \"description\":\"Hey this is apple product\",\n    \"price\":500,\n    \"quantity\":100,\n    \"color\":\"yellow\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:4000/api/product/update-product/64696d5b199eaea74ca479ed",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"update-product",
+												"64696d5b199eaea74ca479ed"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "DELETE's",
+							"item": [
+								{
+									"name": "[GET] Find Product Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NDUyNzQ4NywiZXhwIjoxNjg0NjEzODg3fQ.o7NTdqt_bLDX-HK7kQeNJsBflUslXrhpyShcFsqKE-Y",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/product/delete-product/64696d5b199eaea74ca479ed",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"delete-product",
+												"64696d5b199eaea74ca479ed"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
 				}
 			]
 		}
