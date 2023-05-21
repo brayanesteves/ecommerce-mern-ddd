@@ -403,7 +403,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"title\":\"Apple Watch 1\",\n    \"slug\":\"abc 1\",\n    \"description\":\"Hey this is apple product\",\n    \"price\":500,\n    \"quantity\":100\n}",
+											"raw": "{\n    \"title\":\"Samsung Laptop\",\n    \"category\":\"laptop\",\n    \"brand\":\"Samsung\",\n    \"description\":\"Hey this is apple product\",\n    \"price\":500,\n    \"quantity\":100,\n    \"color\":\"yellow\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
