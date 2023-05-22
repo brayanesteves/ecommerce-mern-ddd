@@ -390,6 +390,174 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "[GET] All Products Params",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/product/find-products?brand=Samsung&color=yellow",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"find-products"
+											],
+											"query": [
+												{
+													"key": "brand",
+													"value": "Samsung"
+												},
+												{
+													"key": "color",
+													"value": "yellow"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[GET] Find Products Params \"Price\" (gte|gt|lte|lt)",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/product/find-products?price[gte]=12501&price[lte]=42000",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"find-products"
+											],
+											"query": [
+												{
+													"key": "price[gte]",
+													"value": "12501"
+												},
+												{
+													"key": "price[lte]",
+													"value": "42000"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[GET] Find Products Params (sort)",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/product/find-products?sort=category,brand",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"find-products"
+											],
+											"query": [
+												{
+													"key": "sort",
+													"value": "category,brand"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[GET] Find Products Params (With menus \"-\" Example -category or -category,-brand)",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/product/find-products?sort=-category",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"find-products"
+											],
+											"query": [
+												{
+													"key": "sort",
+													"value": "-category"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[GET] Find Products Params (fields)",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/product/find-products?fields=title,price,category",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"find-products"
+											],
+											"query": [
+												{
+													"key": "fields",
+													"value": "title,price,category"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[GET] Find Products Params (page & limit)",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "localhost:4000/api/product/find-products?page=1&limit=2",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"product",
+												"find-products"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
