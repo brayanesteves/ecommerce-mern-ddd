@@ -201,4 +201,27 @@ const unblockUser = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = { createUserSingle, createUser, loginUserCtrl, getUsers, getUser, updatedUser, deleteUser, blockUser, unblockUser, handleRefreshToken, logout };
+const updatePassword = asyncHandler(async (req, res) => {
+    const { _id }      = req.user;
+    const { password } = req.body;
+    validateMongDbId(_id);
+    try {
+        const user = await User.findById(_id);
+        if(password) {
+            user.password = password;
+            const updatedPassword = await user.save();
+            res.json({
+                meesage:`Updated Password`,
+                updatedPassword,
+            });
+        } else {
+            res.json({
+                user
+            });
+        }        
+    } catch(error) {
+        throw new Error(error);
+    }
+});
+
+module.exports = { createUserSingle, createUser, loginUserCtrl, getUsers, getUser, updatedUser, deleteUser, blockUser, unblockUser, handleRefreshToken, logout, updatePassword };

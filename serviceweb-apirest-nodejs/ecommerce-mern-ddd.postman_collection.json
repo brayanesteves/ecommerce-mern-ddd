@@ -51,7 +51,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\":\"brayan.esteves93@gmail.com\",\n    \"password\":\"1234\"\n}",
+											"raw": "{\n    \"email\":\"brayan.esteves93@gmail.com\",\n    \"password\":\"abc1234\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -335,6 +335,45 @@
 												"user",
 												"unblock-user",
 												"6467e32bab25458336f082f6"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[PUT] Updated or Reset Password",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NDk0NDUxNCwiZXhwIjoxNjg1MDMwOTE0fQ.7tDZrUxAJ_q6CUqmxBMB9dMeu_B9KosPjEM_Y5OPYHA",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"password\":\"abc1234\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:4000/api/user/password-reset",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"user",
+												"password-reset"
 											]
 										}
 									},
