@@ -72,6 +72,45 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "[POST] Forgot Password (Token)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTU2MjkyNCwiZXhwIjoxNjg1NjQ5MzI0fQ.I1x7kgOdp3ADnWOiJyZxQIWUVtWVe8Nl3F-1TdB13E8",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstname\":\"Brayan\",\n    \"lastname\":\"Esteves\",\n    \"email\":\"brayan.esteves93@gmail.com\",\n    \"mobile\":\"+584149904852\",\n    \"password\":\"abc1234\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:4000/api/user/forgot-password-token",
+											"host": [
+												"localhost"
+											],
+											"port": "4000",
+											"path": [
+												"api",
+												"user",
+												"forgot-password-token"
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
