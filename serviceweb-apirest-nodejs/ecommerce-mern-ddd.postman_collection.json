@@ -723,6 +723,52 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "2 - BLOG",
+					"item": [
+						{
+							"name": "POST's",
+							"item": [
+								{
+									"name": "[POST] Add blog",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY0NjY4MSwiZXhwIjoxNjg1NzMzMDgxfQ.KKRwTnMqbk7WTOjm26PJwasmWlYMZj1DQpSsfpdNVpg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Blog 0\",\n    \"category\":\"BLG\",\n    \"description\":\"Test Blog\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}blog/add-blog",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"add-blog"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
 				}
 			]
 		}
