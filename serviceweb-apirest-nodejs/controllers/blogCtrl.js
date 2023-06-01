@@ -50,4 +50,19 @@ const getBlog = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = { createBlog, updateBlog, getBlog };
+const getAllBlogs = asyncHandler(async (req, res) => {
+    const { id } = req.params;
+    try {
+        const getBlogs = await Blog.find();
+        res.json({
+             status:"success",
+            message:"Blog finds successfully",
+            getBlogs,
+              total:getBlogs.length,
+        });
+    } catch(error) {
+        throw new Error(error);
+    }
+});
+
+module.exports = { createBlog, updateBlog, getBlog, getAllBlogs };
