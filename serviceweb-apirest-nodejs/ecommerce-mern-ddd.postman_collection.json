@@ -840,6 +840,23 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "[GET] Get All Blogs",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}blog/get-blogs",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"get-blogs"
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						}
