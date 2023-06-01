@@ -809,6 +809,39 @@
 									"response": []
 								}
 							]
+						},
+						{
+							"name": "GET's",
+							"item": [
+								{
+									"name": "[GET] Get Blog",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY0NjY4MSwiZXhwIjoxNjg1NzMzMDgxfQ.KKRwTnMqbk7WTOjm26PJwasmWlYMZj1DQpSsfpdNVpg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}blog/get-blog/6478ed7033417efdd35b810c",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"get-blog",
+												"6478ed7033417efdd35b810c"
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						}
 					]
 				}

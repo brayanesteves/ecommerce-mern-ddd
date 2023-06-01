@@ -7,7 +7,7 @@ const createBlog = asyncHandler(async (req, res) => {
     try {
         const newBlog = await Blog.create(req.body);
         res.json({
-            status:"success",
+             status:"success",
             message:"Blog add successfully",
             newBlog,
         });
@@ -21,8 +21,8 @@ const updateBlog = asyncHandler(async (req, res) => {
     try {
         const updateBlog = await Blog.findByIdAndUpdate(id, req.body, { new:true, });
         res.json({
-            status:"success",
-            message:"Blog update successfully",
+               status:"success",
+              message:"Blog update successfully",
             updateBlog,
         });
     } catch(error) {
@@ -30,4 +30,23 @@ const updateBlog = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = { createBlog, updateBlog };
+const getBlog = asyncHandler(async (req, res) => {
+    const { id } = req.params;
+    try {
+        const getBlog = await Blog.findById(id);
+        await Blog.findByIdAndUpdate(id, {
+            $inc:{ numViews:1 }
+        }, 
+        { new:true }
+        );
+        res.json({
+             status:"success",
+            message:"Blog find successfully",
+            getBlog,
+        });
+    } catch(error) {
+        throw new Error(error);
+    }
+});
+
+module.exports = { createBlog, updateBlog, getBlog };
