@@ -859,6 +859,39 @@
 									"response": []
 								}
 							]
+						},
+						{
+							"name": "DELETE's",
+							"item": [
+								{
+									"name": "[DELETE] Delete Blogs",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY1MDA3MSwiZXhwIjoxNjg1NzM2NDcxfQ.V02Meq5VcmnkR7rgtIHHU-M9wNLim7iTgAimFgTpdbo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}blog/delete-blog/6478fa51f1cf794fd59f770d",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"delete-blog",
+												"6478fa51f1cf794fd59f770d"
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						}
 					]
 				}
