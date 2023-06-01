@@ -767,6 +767,48 @@
 									"response": []
 								}
 							]
+						},
+						{
+							"name": "PUT's",
+							"item": [
+								{
+									"name": "[PUT] Update Blog",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY0NjY4MSwiZXhwIjoxNjg1NzMzMDgxfQ.KKRwTnMqbk7WTOjm26PJwasmWlYMZj1DQpSsfpdNVpg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Blog 00\",\n    \"category\":\"BLG0\",\n    \"description\":\"Test Blog0\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}blog/update-blog/6478ed7033417efdd35b810c",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"update-blog",
+												"6478ed7033417efdd35b810c"
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						}
 					]
 				}

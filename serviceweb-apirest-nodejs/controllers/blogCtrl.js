@@ -16,4 +16,18 @@ const createBlog = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = { createBlog };
+const updateBlog = asyncHandler(async (req, res) => {
+    const { id } = req.params;
+    try {
+        const updateBlog = await Blog.findByIdAndUpdate(id, req.body, { new:true, });
+        res.json({
+            status:"success",
+            message:"Blog update successfully",
+            updateBlog,
+        });
+    } catch(error) {
+        throw new Error(error);
+    }
+});
+
+module.exports = { createBlog, updateBlog };
