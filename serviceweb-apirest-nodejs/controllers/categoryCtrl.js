@@ -31,4 +31,19 @@ const updateCategory = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = { createCategory, updateCategory };
+const deleteCategory = asyncHandler(async (req, res) => {
+    const { id } = req.params;
+    validateMongDbId(id);
+    try {
+        const deleteCategory = await Category.findByIdAndDelete(id);
+        res.json({
+            status:"success",
+           message:"Category delete successfully",
+           deleteCategory,
+     });
+    } catch(error) {
+        throw new Error(error);
+    }
+});
+
+module.exports = { createCategory, updateCategory, deleteCategory };

@@ -1002,7 +1002,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"title\":\"Category 0\",\n    \"description\":\"Category Blog\"\n}",
+											"raw": "{\n    \"title\":\"Category Delete\",\n    \"description\":\"Category Blog\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1071,7 +1071,36 @@
 						},
 						{
 							"name": "DELETE's",
-							"item": []
+							"item": [
+								{
+									"name": "[DELETE] Delete Category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY1MDA3MSwiZXhwIjoxNjg1NzM2NDcxfQ.V02Meq5VcmnkR7rgtIHHU-M9wNLim7iTgAimFgTpdbo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}category/delete-category/647a32437ded182818546103",
+											"host": [
+												"{{base_url}}category"
+											],
+											"path": [
+												"delete-category",
+												"647a32437ded182818546103"
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						}
 					]
 				}
