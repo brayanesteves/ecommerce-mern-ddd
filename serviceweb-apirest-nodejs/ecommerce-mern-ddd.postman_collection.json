@@ -1025,7 +1025,45 @@
 						},
 						{
 							"name": "PUT's",
-							"item": []
+							"item": [
+								{
+									"name": "[PUT] Update Category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY0NjY4MSwiZXhwIjoxNjg1NzMzMDgxfQ.KKRwTnMqbk7WTOjm26PJwasmWlYMZj1DQpSsfpdNVpg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Category 0\",\n    \"description\":\"Category Blog\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}category/update-category/647a2e0050f4eb4409334743",
+											"host": [
+												"{{base_url}}category"
+											],
+											"path": [
+												"update-category",
+												"647a2e0050f4eb4409334743"
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						},
 						{
 							"name": "GET's",
