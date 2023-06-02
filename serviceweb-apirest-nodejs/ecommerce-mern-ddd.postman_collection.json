@@ -1095,6 +1095,35 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "[GET] Get All Categorys",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}category/get-categorys",
+											"host": [
+												"{{base_url}}category"
+											],
+											"path": [
+												"get-categorys"
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
