@@ -901,13 +901,13 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{base_url}}blog/get-blog/6478ed7033417efdd35b810c",
+											"raw": "{{base_url}}blog/get-blog/6478fa4ff1cf794fd59f7701",
 											"host": [
 												"{{base_url}}blog"
 											],
 											"path": [
 												"get-blog",
-												"6478ed7033417efdd35b810c"
+												"6478fa4ff1cf794fd59f7701"
 											]
 										}
 									},
