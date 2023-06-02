@@ -1002,7 +1002,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"title\":\"Category Delete\",\n    \"description\":\"Category Blog\"\n}",
+											"raw": "{\n    \"title\":\"Category 1\",\n    \"description\":\"Category Blog 1\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1067,7 +1067,36 @@
 						},
 						{
 							"name": "GET's",
-							"item": []
+							"item": [
+								{
+									"name": "[GET] Get Blog Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY0NjY4MSwiZXhwIjoxNjg1NzMzMDgxfQ.KKRwTnMqbk7WTOjm26PJwasmWlYMZj1DQpSsfpdNVpg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}category/get-category/647a34b5d80f0878f5d67e8c",
+											"host": [
+												"{{base_url}}category"
+											],
+											"path": [
+												"get-category",
+												"647a34b5d80f0878f5d67e8c"
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						},
 						{
 							"name": "DELETE's",
