@@ -723,6 +723,261 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "2 - BLOG",
+					"item": [
+						{
+							"name": "POST's",
+							"item": [
+								{
+									"name": "[POST] Add blog",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY0NjY4MSwiZXhwIjoxNjg1NzMzMDgxfQ.KKRwTnMqbk7WTOjm26PJwasmWlYMZj1DQpSsfpdNVpg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Blog 0\",\n    \"category\":\"BLG\",\n    \"description\":\"Test Blog\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}blog/add-blog",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"add-blog"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "PUT's",
+							"item": [
+								{
+									"name": "[PUT] Update Blog",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY0NjY4MSwiZXhwIjoxNjg1NzMzMDgxfQ.KKRwTnMqbk7WTOjm26PJwasmWlYMZj1DQpSsfpdNVpg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Blog 00\",\n    \"category\":\"BLG0\",\n    \"description\":\"Test Blog0\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}blog/update-blog/6478ed7033417efdd35b810c",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"update-blog",
+												"6478ed7033417efdd35b810c"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[PUT] Like Blog",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY1MDA3MSwiZXhwIjoxNjg1NzM2NDcxfQ.V02Meq5VcmnkR7rgtIHHU-M9wNLim7iTgAimFgTpdbo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"blogId\":\"6478fa4ff1cf794fd59f7701\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}blog/like",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"like"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[PUT] Dislike Blog",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY1MDA3MSwiZXhwIjoxNjg1NzM2NDcxfQ.V02Meq5VcmnkR7rgtIHHU-M9wNLim7iTgAimFgTpdbo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"blogId\":\"6478fa4ff1cf794fd59f7701\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}blog/dislike",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"dislike"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "GET's",
+							"item": [
+								{
+									"name": "[GET] Get Blog",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY0NjY4MSwiZXhwIjoxNjg1NzMzMDgxfQ.KKRwTnMqbk7WTOjm26PJwasmWlYMZj1DQpSsfpdNVpg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}blog/get-blog/6478fa4ff1cf794fd59f7701",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"get-blog",
+												"6478fa4ff1cf794fd59f7701"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[GET] Get All Blogs",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}blog/get-blogs",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"get-blogs"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "DELETE's",
+							"item": [
+								{
+									"name": "[DELETE] Delete Blogs",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY1MDA3MSwiZXhwIjoxNjg1NzM2NDcxfQ.V02Meq5VcmnkR7rgtIHHU-M9wNLim7iTgAimFgTpdbo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}blog/delete-blog/6478fa51f1cf794fd59f770d",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"delete-blog",
+												"6478fa51f1cf794fd59f770d"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
 				}
 			]
 		}
