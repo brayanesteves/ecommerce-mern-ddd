@@ -807,6 +807,42 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "[PUT] Like Blog",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY1MDA3MSwiZXhwIjoxNjg1NzM2NDcxfQ.V02Meq5VcmnkR7rgtIHHU-M9wNLim7iTgAimFgTpdbo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"blogId\":\"6478fa4ff1cf794fd59f7701\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}blog/like",
+											"host": [
+												"{{base_url}}blog"
+											],
+											"path": [
+												"like"
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
@@ -843,9 +879,21 @@
 								},
 								{
 									"name": "[GET] Get All Blogs",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
 									"request": {
 										"method": "GET",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
 											"raw": "{{base_url}}blog/get-blogs",
 											"host": [
