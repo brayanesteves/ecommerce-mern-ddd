@@ -1069,7 +1069,7 @@
 							"name": "GET's",
 							"item": [
 								{
-									"name": "[GET] Get Blog Copy",
+									"name": "[GET] Get Blog",
 									"request": {
 										"auth": {
 											"type": "bearer",
@@ -1153,6 +1153,189 @@
 											"path": [
 												"delete-category",
 												"647a32437ded182818546103"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "2 - BLOG CATEGORY",
+					"item": [
+						{
+							"name": "POST's",
+							"item": [
+								{
+									"name": "[POST] Add blog category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY0NjY4MSwiZXhwIjoxNjg1NzMzMDgxfQ.KKRwTnMqbk7WTOjm26PJwasmWlYMZj1DQpSsfpdNVpg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Blog Category 4\",\n    \"description\":\"Category Blog 4\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}blogcategory/add-blogcategory",
+											"host": [
+												"{{base_url}}blogcategory"
+											],
+											"path": [
+												"add-blogcategory"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "PUT's",
+							"item": [
+								{
+									"name": "[PUT] Update Blog Category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY0NjY4MSwiZXhwIjoxNjg1NzMzMDgxfQ.KKRwTnMqbk7WTOjm26PJwasmWlYMZj1DQpSsfpdNVpg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\":\"Blog Category Delete\",\n    \"description\":\"Blog Category Delete\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}blogcategory/update-blogcategory/647a3cd8cec85a245198cbdd",
+											"host": [
+												"{{base_url}}blogcategory"
+											],
+											"path": [
+												"update-blogcategory",
+												"647a3cd8cec85a245198cbdd"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "GET's",
+							"item": [
+								{
+									"name": "[GET] Get Blog Category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY0NjY4MSwiZXhwIjoxNjg1NzMzMDgxfQ.KKRwTnMqbk7WTOjm26PJwasmWlYMZj1DQpSsfpdNVpg",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}blogcategory/get-blogcategory/647a3cd8cec85a245198cbdd",
+											"host": [
+												"{{base_url}}blogcategory"
+											],
+											"path": [
+												"get-blogcategory",
+												"647a3cd8cec85a245198cbdd"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "[GET] Get All Blog Categorys",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}blogcategory/get-blogcategorys",
+											"host": [
+												"{{base_url}}blogcategory"
+											],
+											"path": [
+												"get-blogcategorys"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "DELETE's",
+							"item": [
+								{
+									"name": "[DELETE] Delete Blog Category",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NTY1MDA3MSwiZXhwIjoxNjg1NzM2NDcxfQ.V02Meq5VcmnkR7rgtIHHU-M9wNLim7iTgAimFgTpdbo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}blogcategory/delete-blogcategory/647a3cd8cec85a245198cbdd",
+											"host": [
+												"{{base_url}}blogcategory"
+											],
+											"path": [
+												"delete-blogcategory",
+												"647a3cd8cec85a245198cbdd"
 											]
 										}
 									},
