@@ -686,6 +686,42 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "[PUT] Add To Wish List",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjdkOTc2ZmI2NmM1NjZiYzQyMzQyMiIsImlhdCI6MTY4NzAzNTEyNiwiZXhwIjoxNjg3MTIxNTI2fQ.ppvHtJCEZaLXAO1hRdJHvL4ymeKaXsIz10YnKo27oA4",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"prodId\":\"64696cf2edf71b1aedaf7db0\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}product/wishlist",
+											"host": [
+												"{{base_url}}product"
+											],
+											"path": [
+												"wishlist"
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
